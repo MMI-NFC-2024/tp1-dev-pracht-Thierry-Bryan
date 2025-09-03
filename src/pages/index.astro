@@ -5,6 +5,7 @@ import PlotFigure from "../components/PlotFigure.astro";
 import penguins from "../assets/penguins.json";
 import weather from "../assets/weather.json";
 import olympians from "../assets/olympians.json";
+import gistemp from "../assets/gistemp.json";
 ---
 
 <Layout>
@@ -22,14 +23,13 @@ import olympians from "../assets/olympians.json";
       }}
     />
   </div>
+
   <div>
-	<h1>Weather</h1>
-	<PlotFigure
-	  options={{
-		marks: [
-		  Plot.dot(weather, { x: "temp", y: "humidity" }),
-		],
-	  }}
-	/>
+    <h1>Weather</h1>
+    <PlotFigure
+      options={{
+        marks: [Plot.dot(weather, { x: "temp", y: "humidity" })],
+      }}
+    />
   </div>
 </Layout>
